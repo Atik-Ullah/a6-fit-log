@@ -7,7 +7,7 @@ const Banner = () => {
       <div className="grid min-h-[500px] grid-cols-1 overflow-hidden rounded-2xl bg-[#15171c] lg:grid-cols-2">
 
         {/* Left Content */}
-        <div className="flex flex-col justify-center p-6 sm:p-10 lg:p-14">
+        <div className="flex flex-col justify-center p-5 sm:p-10 lg:p-14">
           <p className="mb-4 text-sm font-bold tracking-[0.2em] text-[#ccff00]">
             WORKOUT LIBRARY
           </p>
