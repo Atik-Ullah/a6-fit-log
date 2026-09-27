@@ -33,15 +33,12 @@ const Banner = () => {
             </a>
           </div>
         </div>
-
-        {/* Right Image */}
         <div className="relative min-h-[280px] sm:min-h-[350px] lg:min-h-full">
           <Image
             src={banner}
             alt="Workout"
             fill
             priority
-            className="object-cover"
           />
         </div>
 
