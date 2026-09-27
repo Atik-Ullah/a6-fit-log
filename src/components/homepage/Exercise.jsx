@@ -2,7 +2,7 @@ import React from "react";
 import ExerciseCard from "../shared/ExerciseCard";
 
 const getExercise = async () => {
-  const res = await fetch("https://api.abcz.workers.dev/api/fitlog");
+  const res = await fetch("https://api.api-store.workers.dev/api/fitlog");
   return res.json();
 };
 

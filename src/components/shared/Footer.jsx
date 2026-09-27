@@ -4,7 +4,7 @@ import logo from "@/app/assets/logo.png";
 
 const Footer = () => {
   return (
-    <div className="flex justify-between container mx-auto">
+    <div className="flex justify-between container mx-auto mb-8 mt-10">
       <div className="flex gap-2">
         <Image src={logo} alt="Logo"></Image>
         <p className="text-white font-semibold">FITLOG</p>
