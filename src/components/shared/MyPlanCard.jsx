@@ -6,7 +6,7 @@ import React, { useContext } from "react";
 import { WorkoutContext } from "@/context/WorkoutContext";
 
 const MyPlanCard = ({ workout, isSaved }) => {
-  const { removeFromPlan, removeFromSaved } = useContext(WorkoutContext);
+  const { removeFromPlan, removeFromSaved, markAsDone } = useContext(WorkoutContext);
 
   return (
     <div className="flex items-center gap-4 rounded-xl border border-gray-800 bg-[#14171d] p-3">
@@ -39,7 +39,7 @@ const MyPlanCard = ({ workout, isSaved }) => {
         >
           View Details
         </Link>
-        <button className="hidden rounded-full bg-[#ccff00] px-4 py-2 text-[11px] font-bold text-black transition hover:bg-[#b8e600] sm:block">
+        <button onClick={() => markAsDone(workout.id, isSaved)} className="hidden rounded-full bg-[#ccff00] px-4 py-2 text-[11px] font-bold text-black transition hover:bg-[#b8e600] sm:block">
           ✓ Mark as Done
         </button>
         <button
