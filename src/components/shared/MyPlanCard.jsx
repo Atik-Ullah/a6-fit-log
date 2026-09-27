@@ -33,7 +33,7 @@ const MyPlanCard = ({ workout, isSaved }) => {
         </h3>
 
         <p className="mt-1 text-xs text-gray-500">{workout.equipment}</p>
-        <div className="mt-2 flex items-center gap-3 text-[11px] text-gray-400">
+        <div className="mt-3 flex items-center gap-3 text-[11px] text-gray-400">
           <span>◷ {workout.duration} min</span>
 
           <span>🔥 {workout.caloriesBurned} kcal</span>
