@@ -37,12 +37,12 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             <li>
-              <Link href="/" className={pathName === "/" ? "bg-red-500" : ""}>
+              <Link href="/" className={pathName === "/" ? "text-[#C2F800]" : ""}>
                 Workouts
               </Link>
             </li>
             <li>
-              <Link href="/">My Plan</Link>
+              <Link href="/my-plan">My Plan</Link>
             </li>
           </ul>
         </div>
