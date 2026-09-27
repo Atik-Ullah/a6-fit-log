@@ -121,7 +121,11 @@ const MyPlan = () => {
           <div className="space-y-3">
             {(activeTab === "today" ? sortedTodayPlan : sortedSaveWorkout).map(
               (workout) => (
-                <MyPlanCard key={workout.id} workout={workout} />
+                <MyPlanCard
+                  key={workout.id}
+                  workout={workout}
+                  isSaved={activeTab === "saved"}
+                />
               ),
             )}
           </div>

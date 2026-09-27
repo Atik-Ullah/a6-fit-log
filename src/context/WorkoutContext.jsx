@@ -25,8 +25,11 @@ const WorkoutProvider = ({ children }) => {
     return true;
   };
   const removeFromPlan = (id) => {
-      setTodayPlan((plan) => plan.filter((workout) => workout.id !== id));
-    };
+    setTodayPlan((plan) => plan.filter((workout) => workout.id !== id));
+  };
+  const removeFromSaved = (id) => {
+    setSaveWorkouts((saved) => saved.filter((workout) => workout.id !== id));
+  };
 
   const sharedData = {
     todayPlan,
@@ -35,7 +38,8 @@ const WorkoutProvider = ({ children }) => {
     saveWorkouts,
     setSaveWorkouts,
     saveWorkout,
-    removeFromPlan
+    removeFromPlan,
+    removeFromSaved
   };
 
   return (
