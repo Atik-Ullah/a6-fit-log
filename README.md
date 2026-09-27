@@ -15,7 +15,4 @@ Feature :
 - I am using reac-toastify in this project
 - The application uses the FitLog workout API to load workout data.
 - Browse workout exercises from the FitLog API
-- Remove workouts from Today's Plan or Saved list
-Github Link :
-https://github.com/Atik-Ullah/a6-fit-log
-Deployment Link : 
+- Remove workouts from Today's Plan or Saved list 

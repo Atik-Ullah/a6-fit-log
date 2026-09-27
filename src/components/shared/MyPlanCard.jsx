@@ -4,9 +4,18 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useContext } from "react";
 import { WorkoutContext } from "@/context/WorkoutContext";
+import { toast } from "react-toastify";
 
 const MyPlanCard = ({ workout, isSaved }) => {
   const { removeFromPlan, removeFromSaved, markAsDone } = useContext(WorkoutContext);
+  const handleRemoved =() =>{
+    isSaved ? removeFromSaved(workout.id) : removeFromPlan(workout.id);
+    toast.success(`${workout.name} removed`)
+  }
+  const handleMarkAsDone = () => {
+  markAsDone(workout.id, isSaved);
+  toast.success(`${workout.name} marked as done!`);
+};
 
   return (
     <div className="flex items-center gap-4 rounded-xl border border-gray-800 bg-[#14171d] p-3">
@@ -39,13 +48,11 @@ const MyPlanCard = ({ workout, isSaved }) => {
         >
           View Details
         </Link>
-        <button onClick={() => markAsDone(workout.id, isSaved)} className="hidden rounded-full bg-[#ccff00] px-4 py-2 text-[11px] font-bold text-black transition hover:bg-[#b8e600] sm:block">
+        <button onClick={handleMarkAsDone} className="hidden rounded-full bg-[#ccff00] px-4 py-2 text-[11px] font-bold text-black transition hover:bg-[#b8e600] sm:block">
           ✓ Mark as Done
         </button>
         <button
-          onClick={() =>
-            isSaved ? removeFromSaved(workout.id) : removeFromPlan(workout.id)
-          }
+          onClick={handleRemoved}
           className="flex h-8 w-8 items-center justify-center rounded-full text-gray-500 transition hover:text-red-500"
         >
           ×
